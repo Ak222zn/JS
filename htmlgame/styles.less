@@ -1,0 +1,142 @@
+@background-color:rgb(77, 18, 101);
+
+body {
+    background:@background-color;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: skew 3s infinite;
+    transform: skew(20deg);
+    animation-direction: alternate;
+}
+
+@keyframes skew {
+    0% {
+      transform: skewX(20deg);
+    }
+    100% {
+      transform: skewX(-20deg);
+    }
+  }
+
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+
+
+header {
+   text-align: center;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: maroon;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+   
+}
+
+p {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: maroon;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+ul {
+    text-align: center;  
+    color: black;
+    list-style-type: none;
+
+}
+
+li {
+    display: inline-block;
+    background-color: #0074d9;
+    height: 100px;
+    width: 100px;
+    color: white;
+    text-align: center;
+    opacity: .7;
+    font-family: Verdana, sans-serif;
+    border: 3px solid rgba(0,0,0,.3); 
+    margin-bottom: 30px;
+  
+}
+
+.one { 
+    transform: rotateX(40deg);
+    animation: one 2s infinite;
+    animation-direction: alternate;
+  }
+  
+  .two {
+    transform: rotateY(40deg);
+    animation: two 2s infinite;
+    animation-direction: alternate;
+    background-color: #831a4a;
+  }
+  
+  .three {
+    transform: rotateZ(100deg);
+    animation: three 2s infinite;
+    animation-direction: alternate;
+    background-color: #439772;
+  }
+  
+  @keyframes one {
+    0% {
+      transform: rotateX(0);
+    }
+    100% {
+      transform: rotateX(50deg);
+    }
+  }
+  
+  @keyframes two {
+    0% {
+      transform: rotateY(0);
+    }
+    100% {
+      transform: rotateY(70deg);
+    }
+  }
+  
+  @keyframes three {
+    0% {
+      transform: rotateZ(0);
+    }
+    100% {
+      transform: rotateZ(100deg);
+    }
+  }
+
+a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    
+
+}
+
+a:hover, a:active {
+    background-color: red;
+}
+
+a:link {
+   color: black;
+}
+
